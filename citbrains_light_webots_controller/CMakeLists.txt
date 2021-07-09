@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(webots_supervisor_controller)
+project(citbrains_light_webots_controller)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
