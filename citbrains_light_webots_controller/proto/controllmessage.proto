@@ -1,0 +1,21 @@
+syntax = "proto2";
+package lightcontroller;
+
+message ObjectPosition{
+    optional int32 x = 1;
+    optional int32 y = 2;
+    optional int32 type = 3;
+    optional int32 robot_id = 4;
+    optional int32 direction = 5;
+}
+
+message AnglesCommand{
+    optional int32 robot_id = 1;
+    //hr46のサーボ順にした関節角のリストを送るor受け取る
+    repeated float angles = 2;
+}
+
+message ControlMessage{
+    repeated ObjectPosition ObjectList = 1;
+    repeated AnglesCommand RobotAngles = 2;
+}

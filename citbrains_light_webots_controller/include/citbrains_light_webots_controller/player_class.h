@@ -16,11 +16,12 @@
 class Player{
     public:
     //controllerクラスでメッセージとして受け取ったbyte列をパースしてデータをセットする.stringはperfect forwardしたい
-    parseAndSetMessageFromByteSequence(std::string&& bytes);
+    void parseAndSetMessageFromByteSequence(std::string&& bytes);
     
     private:
     int32_t robot_id_;
     //関節角のセット.
-    setMotorAngles();
+    void setMotorAngles();
+    
     
 };
